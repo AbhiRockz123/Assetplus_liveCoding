@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/api', routes);
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://abhishekparmar988:Abhi%40988@cluster0.pvwwysg.mongodb.net/', {
+mongoose.connect('Removed the MONGO_DB URI', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log('MongoDB connected'))

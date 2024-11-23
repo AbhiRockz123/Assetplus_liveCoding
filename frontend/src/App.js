@@ -19,12 +19,14 @@ const App = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newPost),
-    }).then(() => {
-      setNewPost({ title: '', imageUrl: '' });
-      return fetch('http://localhost:5000/api/posts')
-        .then(res => res.json())
-        .then(data => setPosts(data));
-    }).catch(err => console.error(err));
+    })
+      .then(() => {
+        setNewPost({ title: '', imageUrl: '' });
+        return fetch('http://localhost:5000/api/posts')
+          .then(res => res.json())
+          .then(data => setPosts(data));
+      })
+      .catch(err => console.error(err));
   };
 
   return (
