@@ -1,13 +1,8 @@
-var mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-var postSchema = mongoose.Schema(
-    {
-        // @AssetPlus: Describe schema here
+const postSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  imageUrl: { type: String, required: true },
+}, { timestamps: true });
 
-    },
-    {
-        timestamps: true
-    }
-);
-
-module.exports = mongoose.model("Post", postSchema)
+module.exports = mongoose.model('Post', postSchema);

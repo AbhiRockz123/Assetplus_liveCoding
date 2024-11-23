@@ -1,9 +1,7 @@
-var router = require("express").Router();
+const express = require('express');
+const router = express.Router();
+const postRoutes = require('./post');
 
-router.get('/', async (req, res) => {
-    res.send('Server is online')
-})
-
-router.use("/post", require("./post"));
+router.use('/posts', postRoutes);
 
 module.exports = router;
